@@ -27,3 +27,5 @@
 • Siéntanse libres de comentar los métodos si se desea probarlos individualmente.
 
 • Hay un bug (señalado en el código con un comentario) claramente identificado que consiste en que la función `parse()` del `DateFormat` realiza el parsing incluso con valores de día y mes inválidos. Decidí no indagar en él ya que considero que no viene al caso para lo solicitado, pero creo que con un poco más de investigación sobre el `DateFormat` puede ser solucionado fácilmente.
+
+• En cuanto a la implementación de la API Rest, no tengo experiencia con Spring ni Springboot, por lo que estuve intentándolo con algunos tutoriales pero por falta de tiempo no logré realizarlo. Sin embargo voy a intentar hacerlo por mi cuenta ya que, por lo que ví, está bastante interesante y aprender algo nuevo nunca está demás.
