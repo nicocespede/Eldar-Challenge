@@ -2,13 +2,13 @@
 
 ### El ejercicio se realizó implementando lo siguiente:
 
-• Enumerado para las 3 marcas de tarjetas disponibles (Brand): opté por un enumerado por la facilidad que ofrece para agregar nuevas opciones.
+• **Enumerado** para las 3 marcas de tarjetas disponibles (`Brand`): opté por un enumerado por la facilidad que ofrece para agregar nuevas opciones.
     
-• Clase que modela una tarjeta de crédito (CreditCard).
+• **Clase** que modela una tarjeta de crédito (`CreditCard`).
 
-• Clase que modela una operación (Transaction).
+• **Clase** que modela una operación (`Transaction`).
 
-• Clase ejecutable (Main): contiene los métodos pedidos en el enunciado con algunos datos hardcodeados (que se pueden modificar libremente) para realizar las pruebas necesarias y recrear distintos escenarios.
+• **Clase ejecutable** (`Main`): contiene los métodos pedidos en el enunciado con algunos datos hardcodeados (que se pueden modificar libremente) para realizar las pruebas necesarias y recrear distintos escenarios.
 
 ## **Métodos implementados en la clase Main:**
 
