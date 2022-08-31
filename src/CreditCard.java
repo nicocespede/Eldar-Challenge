@@ -7,6 +7,7 @@ public class CreditCard {
 	private String number;
 	private String cardholderFullName;
 	private Date expirationDate;
+	private double spentAmount;
 
 	public CreditCard(Brand brand, String number, String cardholderFullName, Date expirationDate) throws Exception {
 		Pattern pattern = Pattern.compile("^(\\d{10}|\\d{12})$");
@@ -25,6 +26,7 @@ public class CreditCard {
 			throw new Exception("Invalid cardholder name");
 
 		this.expirationDate = expirationDate;
+		this.spentAmount = 0;
 	}
 
 	public boolean equals(CreditCard creditCard) {
@@ -36,23 +38,31 @@ public class CreditCard {
 			return false;
 	}
 
+	public void increaseSpentAmount(double amount) {
+		this.spentAmount += amount;
+	}
+
 	public static boolean validateOperability(CreditCard card) {
 		return card.getExpirationDate().before(new Date()) ? false : true;
 	}
 
 	public Brand getBrand() {
-		return brand;
+		return this.brand;
 	}
 
 	public String getNumber() {
-		return number;
+		return this.number;
 	}
 
 	public String getCardholderFullName() {
-		return cardholderFullName;
+		return this.cardholderFullName;
 	}
 
 	public Date getExpirationDate() {
-		return expirationDate;
+		return this.expirationDate;
+	}
+
+	public double getSpentAmount() {
+		return this.spentAmount;
 	}
 }

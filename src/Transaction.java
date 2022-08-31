@@ -1,6 +1,5 @@
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
 
 public class Transaction {
@@ -62,28 +61,19 @@ public class Transaction {
 			return amount * fee;
 	}
 
-	public static boolean isValid(ArrayList<Transaction> history, Transaction transaction) {
-		ArrayList<Transaction> transactions = new ArrayList<Transaction>(history);
-		transactions.removeIf(t -> !t.getCreditCard().equals(transaction.getCreditCard()));
-
-		double totalAmount = 0;
-		for (Transaction t : transactions) {
-			totalAmount += t.getRechargedAmount();
-			//System.out.println(totalAmount);
-		}
-
-		return totalAmount + transaction.getRechargedAmount() >= 1000.0 ? false : true;
+	public static boolean isValid(Transaction transaction) {
+		return transaction.getCreditCard().getSpentAmount() + transaction.getRechargedAmount() >= 1000.0 ? false : true;
 	}
 
 	public CreditCard getCreditCard() {
-		return creditCard;
+		return this.creditCard;
 	}
 
 	public double getAmount() {
-		return amount;
+		return this.amount;
 	}
 
 	public double getRechargedAmount() {
-		return rechargedAmount;
+		return this.rechargedAmount;
 	}
 }
